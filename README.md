@@ -88,6 +88,35 @@ Based on this visualization, I applied filtering thresholds to retain cells with
 
 This ensures the downstream analysis is based on high-quality, biologically relevant cells only.
 
+### 🔹 Feature scatter:
+<p align="center"><img src="figures/Feature_scatter.png" width="500"/></p>
+
+This scatter plot compares:
+
+1. nCount_RNA (total UMI counts per cell) on the x-axis
+2. nFeature_RNA (number of detected genes) on the y-axis
+
+- Each point represents a single cell. The linear trend shows that as UMI counts increase, the number of detected genes also increases — which is expected. However:
+- Cells far above the main trendline likely contain many genes per UMI, potentially due to doublets or highly complex transcriptomes.
+- Cells below the curve may reflect technical noise or low-quality capture.
+
+This plot supports QC decisions by revealing non-linear outliers, helping confirm that the applied thresholds (200–2,500 genes and <5% mitochondrial content) appropriately exclude anomalous cells while retaining biologically meaningful ones.
+
+### 🔹 Variable Feature Plot
+<p align="center"><img src="figures/Variable_features.png" width="500"/></p>
+- This scatter plot highlights the 2,000 most variable genes across the 464 filtered single cells, identified using the vst method in Seurat.
+- Each red dot represents a gene, plotted by its average expression vs. dispersion. Genes with high variability are biologically interesting because they are more likely to reflect true cell-to-cell differences rather than technical noise.
+- These variable genes were used as input for:
+
+1. Principal Component Analysis (PCA)
+2. Clustering
+3. UMAP visualization
+
+Focusing on highly variable features enhances the signal-to-noise ratio and enables more meaningful detection of distinct transcriptional subpopulations within the NSCLC dataset.
+
+
+
+
 ### 🔹 UMAP Clustering
 <p align="center"><img src="figures/cluster_dimplot.png" width="500"/></p>
 
