@@ -34,16 +34,16 @@ To identify transcriptionally distinct subpopulations within NSCLC tumor samples
 | **8. UMAP** | Visualized clusters in 2D space |
 | **9. Marker Detection** | Identified top marker genes for each cluster |
 
-## 📊 Key Visualizations
+##  Key Visualizations
 
 ### 🔹 Quality Control
 <p align="center"><img src="figures/QC_violinplot.png" width="500"/></p>
 
 ### 🔹 UMAP Clustering
-<p align="center"><img src="figures/umap_clusters_res0.5.png" width="500"/></p>
+<p align="center"><img src="figures/cluster_dimplot.png" width="500"/></p>
 
 ### 🔹 Marker Gene Heatmap
-<p align="center"><img src="figures/marker_heatmap.png" width="500"/></p>
+<p align="center"><img src="figures/top_marker_genes.png" width="500"/></p>
 
 
 ## Takeaways
@@ -51,7 +51,7 @@ To identify transcriptionally distinct subpopulations within NSCLC tumor samples
 - Top markers: ITGA1, TRGC2, LILRB4, FCGR2A
 - Strong evidence of epithelial and immune cell populations
 
-## Referrences:
+## References:
 - [Seurat Documentation](https://satijalab.org/seurat/)
 - [10x Genomics dataset](https://www.10xgenomics.com/datasets/20k-mixture-of-nsclc-dtcs-from-7-donors-3-v3-1-with-intronic-reads-3-1-standard)
 
