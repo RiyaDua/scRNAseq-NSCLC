@@ -114,6 +114,18 @@ This plot supports QC decisions by revealing non-linear outliers, helping confir
 
 Focusing on highly variable features enhances the signal-to-noise ratio and enables more meaningful detection of distinct transcriptional subpopulations within the NSCLC dataset.
 
+### 🔹 PCA Heatmap: Principal Component 1
+
+<p align="center"><img src="figures/pca_dimheatmap_PC1.png" width="600"/></p>
+- This heatmap shows the top gene loadings contributing to Principal Component 1 (PC1), which captures the greatest variance in the dataset.
+- Each row is a gene, and each column represents an individual cell. The intensity of yellow indicates the relative expression of each gene in each cell.
+
+Key observations:
+
+1. Distinct blocks of gene expression suggest coordinated transcriptional programs, likely reflecting specific cell subtypes or states.
+2. PC1 separates cells based on expression of genes like CCL5, NKG7, GZMB, VIM, and CD69, many of which are involved in immune response, epithelial–mesenchymal transition, or cell signaling.
+3. This heatmap helps interpret what biological signals underlie PC1, guiding further analysis and validation of cluster identities.
+
 
 
 
