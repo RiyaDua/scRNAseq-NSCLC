@@ -211,4 +211,4 @@ Key observations:
 ## References:
 - [Seurat Documentation](https://satijalab.org/seurat/)
 - [10x Genomics dataset](https://www.10xgenomics.com/datasets/20k-mixture-of-nsclc-dtcs-from-7-donors-3-v3-1-with-intronic-reads-3-1-standard)
-
+- [Youtube Video-Introduction to single-cell RNA-Seq and Seurat](https://www.youtube.com/watch?v=xbX49h7BiUU&t=48s)
