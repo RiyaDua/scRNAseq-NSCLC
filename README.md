@@ -181,7 +181,7 @@ Key observations:
 
 
 ### DotPlot: Expression of Key Biological Markers Across Clusters
-<p align="center"><img src="figures/marker_expression_per_cluster.png" width="700"/></p>
+<p align="center"><img src="figures/marker_expression_per_cluster.png" width="400"/></p>
 
 - This dot plot shows expression levels of selected marker genes across clusters:
 
