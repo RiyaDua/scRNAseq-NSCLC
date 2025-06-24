@@ -66,10 +66,27 @@ For example, clusters showed enriched expression of genes like **ITGA1**, **TRGC
 | **8. UMAP** | Visualized clusters in 2D space |
 | **9. Marker Detection** | Identified top marker genes for each cluster |
 
-##  Key Visualizations
+##  Key Results and Visualizations:
 
 ### 🔹 Quality Control
 <p align="center"><img src="figures/QC_violinplot.png" width="500"/></p>
+This violin plot shows three critical metrics across all cells before filtering:
+
+**nCount_RNA:** Total UMI counts per cell
+- Most cells have between 5,000–30,000 UMIs, with a few outliers exceeding 90,000, possibly indicating doublets.
+
+**nFeature_RNA:** Number of detected genes per cell
+- The majority of cells express 1,000–2,500 genes, suggesting good transcriptome coverage.
+
+**percent.mt:** Percentage of reads mapping to mitochondrial genes
+- Most cells have <10% mitochondrial content, but some exceed 50%, typically indicating low-quality or dying cells.
+
+Based on this visualization, I applied filtering thresholds to retain cells with:
+
+1. nFeature_RNA between 200 and 2,500
+2. percent.mt below 5%
+
+This ensures the downstream analysis is based on high-quality, biologically relevant cells only.
 
 ### 🔹 UMAP Clustering
 <p align="center"><img src="figures/cluster_dimplot.png" width="500"/></p>
