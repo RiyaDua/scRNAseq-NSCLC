@@ -52,7 +52,7 @@ vln<-VlnPlot(object = seurat.obj, features = c("nCount_RNA", "nFeature_RNA", "pe
 fs<-FeatureScatter(seurat.obj, feature1 = "nCount_RNA", feature2 = "nFeature_RNA") +
   geom_smooth(method = 'lm')
 ggsave("Desktop/Independent projects/Seurat/figures/QC_violinplot.png", plot = vln, width = 9, height = 4, dpi = 300)
-ggsave("Desktop/Independent projects/Seurat/figures/Feature_scatter.png", plot = fs, dpi = 300)# width = 9, height = 4, dpi = 300)
+ggsave("Desktop/Independent projects/Seurat/figures/Feature_scatter.png", plot = fs, dpi = 300)
 
 
 ## 4.2. Filtering out low quality cells ====
