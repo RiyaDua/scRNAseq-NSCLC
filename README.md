@@ -96,8 +96,10 @@ This scatter plot compares:
 1. nCount_RNA (total UMI counts per cell) on the x-axis
 2. nFeature_RNA (number of detected genes) on the y-axis
 
-- Each point represents a single cell. The linear trend shows that as UMI counts increase, the number of detected genes also increases — which is expected. However:
+- Each point represents a single cell. The linear trend shows that as UMI counts increase, the number of detected genes also increases, which is expected. However:
+  
 - Cells far above the main trendline likely contain many genes per UMI, potentially due to doublets or highly complex transcriptomes.
+  
 - Cells below the curve may reflect technical noise or low-quality capture.
 
 This plot supports QC decisions by revealing non-linear outliers, helping confirm that the applied thresholds (200–2,500 genes and <5% mitochondrial content) appropriately exclude anomalous cells while retaining biologically meaningful ones.
@@ -105,7 +107,9 @@ This plot supports QC decisions by revealing non-linear outliers, helping confir
 ### 🔹 Variable Feature Plot
 <p align="center"><img src="figures/Variable_features.png" width="500"/></p>
 - This scatter plot highlights the 2,000 most variable genes across the 464 filtered single cells, identified using the vst method in Seurat.
+
 - Each red dot represents a gene, plotted by its average expression vs. dispersion. Genes with high variability are biologically interesting because they are more likely to reflect true cell-to-cell differences rather than technical noise.
+
 - These variable genes were used as input for:
 
 1. Principal Component Analysis (PCA)
@@ -118,6 +122,7 @@ Focusing on highly variable features enhances the signal-to-noise ratio and enab
 
 <p align="center"><img src="figures/pca_dimheatmap_PC1.png" width="600"/></p>
 - This heatmap shows the top gene loadings contributing to Principal Component 1 (PC1), which captures the greatest variance in the dataset.
+
 - Each row is a gene, and each column represents an individual cell. The intensity of yellow indicates the relative expression of each gene in each cell.
 
 Key observations:
@@ -137,7 +142,7 @@ Key observations:
 
 
 ## Takeaways
-- Identified 5 transcriptionally distinct clusters
+
 - Top markers: ITGA1, TRGC2, LILRB4, FCGR2A
 - Strong evidence of epithelial and immune cell populations
 
