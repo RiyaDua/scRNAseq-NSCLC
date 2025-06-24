@@ -90,7 +90,7 @@ Based on this visualization, I applied filtering thresholds to retain cells with
 This ensures the downstream analysis is based on high-quality, biologically relevant cells only.
 
 ### 🔹 Feature scatter:
-<p align="center"><img src="figures/Feature_scatter.png" width="500"/></p>
+<p align="center"><img src="figures/Feature_scatter.png" width="400"/></p>
 
 This scatter plot compares:
 
@@ -106,7 +106,7 @@ This scatter plot compares:
 This plot supports QC decisions by revealing non-linear outliers, helping confirm that the applied thresholds (200–2,500 genes and <5% mitochondrial content) appropriately exclude anomalous cells while retaining biologically meaningful ones.
 
 ### 🔹 Variable Feature Plot
-<p align="center"><img src="figures/Variable_features.png" width="500"/></p>
+<p align="center"><img src="figures/Variable_features.png" width="400"/></p>
 - This scatter plot highlights the 2,000 most variable genes across the 464 filtered single cells, identified using the vst method in Seurat.
 
 - Each red dot represents a gene, plotted by its average expression vs. dispersion. Genes with high variability are biologically interesting because they are more likely to reflect true cell-to-cell differences rather than technical noise.
@@ -121,7 +121,7 @@ Focusing on highly variable features enhances the signal-to-noise ratio and enab
 
 ### 🔹 PCA Heatmap: Principal Component 1
 
-<p align="center"><img src="figures/pca_dimheatmap_PC1.png" width="600"/></p>
+<p align="center"><img src="figures/pca_dimheatmap_PC1.png" width="400"/></p>
 - This heatmap shows the top gene loadings contributing to Principal Component 1 (PC1), which captures the greatest variance in the dataset.
 
 - Each row is a gene, and each column represents an individual cell. The intensity of yellow indicates the relative expression of each gene in each cell.
