@@ -1,6 +1,7 @@
 # Single-Cell RNA-seq Analysis of NSCLC Tumor Cells
 
  **Author**: Riya Dua
+ 
  **Dataset**: 20k dissociated tumor cells from NSCLC patients (10x Genomics)  
  **Tool used**: Seurat in R  
  **Goal**: Identify cellular heterogeneity and marker genes
