@@ -134,12 +134,73 @@ Key observations:
 
 
 
-
 ### 🔹 UMAP Clustering
-<p align="center"><img src="figures/cluster_dimplot.png" width="500"/></p>
+<p align="center"><img src="figures/ind_cluster_dimplot.png" width="400"/></p>
+
+- This UMAP (Uniform Manifold Approximation and Projection) plot projects high-dimensional gene expression data into two dimensions while preserving both local and global structures. Each point represents an individual cell, and colors correspond to clusters identified through graph-based clustering.
+
+- Key insights:
+
+1. At a chosen resolution (e.g., 0.5), the UMAP shows clear separation of clusters, indicating transcriptionally distinct cell populations.
+
+2. Cluster 0 is the largest, potentially representing a dominant tumor cell population.
+
+3. Smaller clusters such as 1, 2, and 3 may represent rare cell types, infiltrating immune cells, or functionally distinct states.
+
+- UMAP is particularly effective in capturing the non-linear relationships between cells, making it one of the most interpretable and informative plots in scRNA-seq analysis.>
 
 ### 🔹 Marker Gene Heatmap
-<p align="center"><img src="figures/top_marker_genes.png" width="500"/></p>
+<p align="center"><img src="figures/top_marker_genes.png" width="400"/></p>
+- This heatmap displays the expression levels of top marker genes identified for each cluster using FindAllMarkers().
+
+- Each row represents a gene, and each column is a cell. Expression levels are color-scaled from black (low) to yellow (high).
+
+- Key highlights:
+
+1. ITGA1 and TRGC2 are highly expressed in Cluster 0, suggesting potential tumor epithelial or cytotoxic T-cell identity.
+
+2. LILRB4 and FCGR2A, associated with myeloid lineage and immune regulation, are enriched in Cluster 1.
+
+3. IGLC2 and IGLV3-1, known B-cell markers, are selectively expressed in Cluster 3.
+
+- These patterns provide strong evidence of cellular heterogeneity within the NSCLC tumor sample, including likely contributions from both tumor-intrinsic and immune subpopulations.
+
+
+### 🔹 Feature Plots of Key Marker Genes on UMAP
+<p align="center"><img src="figures/feature_plot.png" width="400"/></p>
+
+- This panel shows the UMAP projection of individual gene expression levels for four top marker genes:
+
+1. ITGA1 and TRGC2: Strongly expressed in Cluster 0, possibly marking tumor or cytotoxic T-like cell populations.
+
+2. LILRB4 and FCGR2A: Enriched in distinct regions, likely representing myeloid lineage or immunoregulatory cells.
+
+- Each dot represents a cell, and the color intensity reflects the normalized expression of the gene in that cell.
+
+- These visualizations validate that the selected marker genes are not only statistically significant but also spatially confined to specific clusters, reinforcing the presence of biologically meaningful subpopulations within the NSCLC tumor.
+
+
+### DotPlot: Expression of Key Biological Markers Across Clusters
+<p align="center"><img src="figures/marker_expression_per_cluster.png" width="700"/></p>
+
+- This dot plot shows expression levels of selected marker genes across clusters:
+
+1. EPCAM and CDH1: Epithelial markers
+
+2. VIM: A canonical EMT (epithelial-to-mesenchymal transition) marker
+
+3. MKI67: A proliferation marker
+
+- Interpretation:
+
+1. Cluster 2 expresses EPCAM strongly, suggesting epithelial tumor cell identity.
+
+2. VIM is broadly expressed across multiple clusters, possibly reflecting EMT-like states or mesenchymal phenotypes.
+
+3. MKI67 is low across all clusters, consistent with low proliferative activity in this dataset.
+
+- The size of each dot reflects the percentage of cells in that cluster expressing the gene, while color intensity corresponds to the average expression level.
+
 
 
 ## Takeaways
